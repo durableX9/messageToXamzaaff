@@ -18,7 +18,7 @@ def db_profile_exist(uid):
 		return False
 
 
-def db_profile_exist_usr(username):
+def db_profile_exist_user(username):
 	if profiles.find_one({'username': username}) != None:
 		return True
 	else:
@@ -33,7 +33,7 @@ def db_profile_access(uid):
 	return profiles.find_one({'_id': uid})['access']
 
 
-def db_profile_bannedD(uid):
+def db_profile_banned(uid):
 	if profiles.find_one({'_id': uid})['ban'] == 1:
 		return True
 	else:
