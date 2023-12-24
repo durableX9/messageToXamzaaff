@@ -44,4 +44,3 @@ async def newquestion(message: types.Messagem state: FSMContext):
 
 def register_handler_FSM():
 	dp.register_message_handler(newquestion, state=FSMQuestion.text, content_types=['photo', 'text'])
-	
