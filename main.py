@@ -1,9 +1,9 @@
-from aiogram import Bot
-from aiogram.dispatcher import Dispatcher
-from aiogram.contrib.fsm_storage.memory import MemoryStorage
+from bot import dp, bot
+from aiogram.utils import executor
+from handlers import client, admin, fsm
 
-import config
+admin.register_handler_admin()
+fsm.register_handler_FSM()
+client.register_handler_client()
 
-storage = MemoryStorage()
-bot = Bot(token=config.cfg['token'])
-dp = Dispatcher(bot, storage=storage)
+executor.start_polling(dp, skip_updates=True)
