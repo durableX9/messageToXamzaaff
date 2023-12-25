@@ -1,7 +1,7 @@
 from aiogram import types
 
 import kb
-from bot import dp, bot
+from loader import dp, bot
 from handlers.fsm import *
 from handlers.db import db_profile_exist, db_profile_insertone, db_profile_banned
 from configurebot import cfg

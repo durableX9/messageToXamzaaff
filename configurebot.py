@@ -1,5 +1,5 @@
 cfg = {
-	'token': '6340552051:AAHOrEj0iGvaLED0bMVvGdCRyFcQuySrMcs',
+	'token': '6509213439:AAFOQ8VHOjgTFHTyItfkDLlnGoFtgVRJGHk',
 	'name': 'anothertype',
 	'dev_id': 5879104626,
 	'teh_chat_id': -1002112563993,

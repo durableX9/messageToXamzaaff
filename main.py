@@ -1,4 +1,4 @@
-from bot import dp, bot
+from loader import dp, bot
 from aiogram.utils import executor
 from handlers import client, admin, fsm
 

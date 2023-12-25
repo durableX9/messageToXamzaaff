@@ -1,7 +1,7 @@
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
-from bot import bot,dp
+from loader import bot,dp
 from configurebot import cfg
 
 tehchatid = cfg['teh_chat_id']
