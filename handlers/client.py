@@ -18,7 +18,7 @@ handler_button_new_question = cfg['button_new_question']
 async def client_start(message: types.Message):
     try:
         if(message.chat.type != 'private'):
-            await message.answer('Данную команду можно использовать только в личных сообщениях с ботом.')
+            await message.answer('This Command Only Used In Private Messaging.')
             return
         if db_profile_exist(message.from_user.id):
             await message.answer(f'{welcomemessage}',parse_mode='Markdown', reply_markup=kb.mainmenu)
@@ -29,34 +29,29 @@ async def client_start(message: types.Message):
                 'access': 0,
                 'ban': 0
             })
-            print('Новый пользователь!')
+            print('New User!')
             await message.answer(f'{welcomemessage}',parse_mode='Markdown', reply_markup=kb.mainmenu)
     except Exception as e:
         cid = message.chat.id
         await message.answer(f"{errormessage}",
                              parse_mode='Markdown')
-        await bot.send_message(devid, f"Случилась *ошибка* в чате *{cid}*\nСтатус ошибки: `{e}`",
+        await bot.send_message(devid, f"*Error* In Chat *{cid}*\nError Status: `{e}`",
                                parse_mode='Markdown')
+
 
 async def client_newquestion(message: types.Message):
     try:
         if message.text == handler_button_new_question:
             if db_profile_banned(message.from_user.id):
-                await message.answer("⚠ Ви *заблоковані* у боті!", parse_mode='Markdown')
+                await message.answer("⚠ You *Blocked* In Bot!", parse_mode='Markdown')
                 return
             await message.answer(f"{question_first_msg}")
             await FSMQuestion.text.set()
-        elif message.text == handler_button_about_us:
-            if db_profile_banned(message.from_user.id):
-                await message.answer("⚠ Ви *заблоковані* у боті!", parse_mode='Markdown')
-                return
-            await message.answer(f"{aboutus}", disable_web_page_preview=True, parse_mode='Markdown')
-
     except Exception as e:
         cid = message.chat.id
         await message.answer(f"{errormessage}",
                              parse_mode='Markdown')
-        await bot.send_message(devid, f"Случилась *ошибка* в чате *{cid}*\nСтатус ошибки: `{e}`",
+        await bot.send_message(devid, f"*Error* In Chat *{cid}*\Error Status: `{e}`",
                                parse_mode='Markdown')
 
 
@@ -67,8 +62,9 @@ async def client_getgroupid(message: types.Message):
         cid = message.chat.id
         await message.answer(f"{errormessage}",
                              parse_mode='Markdown')
-        await bot.send_message(devid, f"Случилась *ошибка* в чате *{cid}*\nСтатус ошибки: `{e}`",
+        await bot.send_message(devid, f"*Error* In Chat *{cid}*\Error Status: `{e}`",
                                parse_mode='Markdown')
+
 
 def register_handler_client():
     dp.register_message_handler(client_start, commands='start', state=None)

@@ -19,7 +19,7 @@ async def newquestion(message: types.Message, state: FSMContext):
 			data['text'] = message.text
 	await state.finish()
 	if(message.chat.username == None):
-		who = "Ник не установлен"
+		who = "No Username"
 	else:
 		who = "@"+message.chat.username
 	question = data['text']
@@ -27,12 +27,12 @@ async def newquestion(message: types.Message, state: FSMContext):
 		ph = message.photo[0].file_id
 		await message.reply(f"{message_seneded}",
 							parse_mode='Markdown')
-		await bot.send_photo(tehchatid, ph, caption=f"✉ | Новый вопрос\nОт: {who}\nВопрос: `{data['text']}`\n\n📝 Чтобы ответить на вопрос введите `/ответ {message.chat.id} Ваш ответ`",parse_mode='Markdown')
+		await bot.send_photo(tehchatid, ph, caption=f"✉ | New Question\nFrom: {who}\nQuestion: `{data['text']}`\n\n📝 For Answer Question Please Type `/answer {message.chat.id} Your Answer`",parse_mode='Markdown')
 	else:
 		await message.reply(f"{message_seneded}",
 							parse_mode='Markdown')
 		await bot.send_message(tehchatid,
-							   f"✉ | Новый вопрос\nОт: {who}\nВопрос: `{data['text']}`\n\n📝 Чтобы ответить на вопрос введите `/ответ {message.chat.id} Ваш ответ`",
+							   f"✉ | New Question\nFrom: {who}\nQuestion: `{data['text']}`\n\n📝 For Answer Question Please Type `/answer {message.chat.id} Your Answer`",
 							   parse_mode='Markdown')
 
 def register_handler_FSM():
