@@ -3,7 +3,7 @@ cfg = {
 	'name': 'anothertype',
 	'dev_id': 5879104626,
 	'teh_chat_id': -1002112563993,
-	'db_url': 'mongodb+srv://mvhd:mvhd@cluster0.qg09zhw.mongodb.net/?retryWrites=true&w=majority',
+	'db_url': 'mongodb+srv://mvhd:root@cluster0.qg09zhw.mongodb.net/?retryWrites=true&w=majority',
 	'db_name': 'dev',
 
 	'button_new_question': "📩 Savolni yo'llash",
