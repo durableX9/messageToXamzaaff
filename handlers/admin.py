@@ -15,6 +15,7 @@ devid = cfg['dev_id']
 def extract_arg(arg):
     return arg.split()[1:]
 
+
 async def admin_ot(message: types.Message):
     try:
         uid = message.from_user.id
@@ -41,6 +42,7 @@ async def admin_ot(message: types.Message):
                              parse_mode='Markdown')
         await bot.send_message(devid, f"*Error* In Chat *{cid}*\nError Status: `{e}`",
                                parse_mode='Markdown')
+
 
 async def admin_giveaccess(message: types.Message):
     try:
@@ -83,6 +85,7 @@ async def admin_giveaccess(message: types.Message):
                              parse_mode='Markdown')
         await bot.send_message(devid, f"*Error* In Chat *{cid}*\nStatus Error: `{e}`",
                                parse_mode='Markdown')
+
 
 async def admin_ban(message: types.Message):
     try:
