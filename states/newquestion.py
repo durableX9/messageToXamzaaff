@@ -2,7 +2,7 @@ from aiogram import types
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from loader import bot,dp
-from config import cfg
+from cfgmust import cfg
 
 tehchatid = cfg['teh_chat_id']
 message_seneded = cfg['question_ur_question_sended_message']

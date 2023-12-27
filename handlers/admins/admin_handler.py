@@ -1,9 +1,9 @@
 from aiogram import types
 
 from loader import dp, bot
-from handlers.fsm import *
-from handlers.db import db_profile_access, db_profile_exist, db_profile_updateone, db_profile_exist_usr, db_profile_get_usrname
-from config import cfg
+from states.newquestion import *
+from utils.db_api.db import db_profile_access, db_profile_exist, db_profile_updateone, db_profile_exist_usr, db_profile_get_usrname
+from cfgmust import cfg
 
 errormessage = cfg['error_message']
 lvl1name = cfg['1lvl_adm_name']

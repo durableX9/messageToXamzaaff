@@ -2,9 +2,9 @@ from aiogram import types
 
 from keyboards.default import message_keyboard
 from loader import dp, bot
-from handlers.fsm import *
-from handlers.db import db_profile_exist, db_profile_insertone, db_profile_banned
-from config import cfg
+from states.newquestion import *
+from utils.db_api.db import db_profile_exist, db_profile_insertone, db_profile_banned
+from cfgmust import cfg
 
 
 welcomemessage = cfg['welcome_message']
