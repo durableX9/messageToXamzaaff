@@ -1,6 +1,6 @@
 import pymongo
 from pymongo.server_api import ServerApi
-from configurebot import cfg
+from config import cfg
 
 dburl = cfg['db_url']
 db = cfg['db_name']

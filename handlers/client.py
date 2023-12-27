@@ -1,10 +1,10 @@
 from aiogram import types
 
-import kb
+from keyboards.default import message_keyboard
 from loader import dp, bot
 from handlers.fsm import *
 from handlers.db import db_profile_exist, db_profile_insertone, db_profile_banned
-from configurebot import cfg
+from config import cfg
 
 
 welcomemessage = cfg['welcome_message']
@@ -21,7 +21,7 @@ async def client_start(message: types.Message):
             await message.answer('This Command Only Used In Private Messaging.')
             return
         if db_profile_exist(message.from_user.id):
-            await message.answer(f'{welcomemessage}',parse_mode='Markdown', reply_markup=kb.mainmenu)
+            await message.answer(f'{welcomemessage}',parse_mode='Markdown', reply_markup=message_keyboard.mainmenu)
         else:
             db_profile_insertone({
                 '_id': message.from_user.id,
@@ -30,7 +30,7 @@ async def client_start(message: types.Message):
                 'ban': 0
             })
             print('New User!')
-            await message.answer(f'{welcomemessage}',parse_mode='Markdown', reply_markup=kb.mainmenu)
+            await message.answer(f'{welcomemessage}',parse_mode='Markdown', reply_markup=message_keyboard.mainmenu)
     except Exception as e:
         cid = message.chat.id
         await message.answer(f"{errormessage}",
