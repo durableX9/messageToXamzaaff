@@ -14,8 +14,7 @@ cfg = {
 	'question_type_ur_question_message': "Iltimos savolingizni to'g'ri va to'liq bayon qiling.",
 	'question_ur_question_sended_message': "Sizning habaringiz *xamzaaffga* yuborildi, iltimos javobini kuting!",
 
-	'1lvl_adm_name': 'Тех.поддержка',
-	'2lvl_adm_name': 'Администратор',
-	'3lvl_adm_name': 'Руководитель'
+	'1lvl_adm_name': 'Support',
+	'2lvl_adm_name': 'Administrator',
+	'3lvl_adm_name': 'XAMZAAFF'
 }
-

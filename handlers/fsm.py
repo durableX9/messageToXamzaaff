@@ -10,7 +10,7 @@ message_seneded = cfg['question_ur_question_sended_message']
 class FSMQuestion(StatesGroup):
 	text = State()
 
-# Обработчики
+# handlers
 async def newquestion(message: types.Message, state: FSMContext):
 	async with state.proxy() as data:
 		if (message.content_type == 'photo'):

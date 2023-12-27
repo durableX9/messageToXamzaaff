@@ -3,7 +3,7 @@ from environs import Env
 env = Env()
 env.read_env()
 
-# .env fayl ichidan quyidagilarni o'qiymiz
-BOT_TOKEN = env.str("BOT_TOKEN")  # Bot toekn
-ADMINS = env.list("ADMINS")  # adminlar ro'yxati
-GROUPS = env.list("GROUPS")
+# We Can Read files from .env
+BOT_TOKEN = env.str("BOT_TOKEN")  # Bot Token   
+ADMINS = env.list("ADMINS")  # ADMINS
+GROUPS = env.list("GROUPS") # Groups
