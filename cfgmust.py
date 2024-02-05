@@ -1,7 +1,7 @@
 cfg = {
 	'token': '6509213439:AAFOQ8VHOjgTFHTyItfkDLlnGoFtgVRJGHk',
 	'name': 'anothertype',
-	'dev_id': 5879104626,
+	'dev_id': 6601294279,
 	'teh_chat_id': -1002112563993,
 	'db_url': 'mongodb+srv://mvhd:root@cluster0.qg09zhw.mongodb.net/?retryWrites=true&w=majority',
 	'db_name': 'dev',
