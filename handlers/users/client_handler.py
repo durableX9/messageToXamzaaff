@@ -1,11 +1,10 @@
 from aiogram import types
-
-from keyboards.default import message_keyboard
 from loader import dp, bot
 from states.newquestion import *
 from utils.db_api.db import db_profile_exist, db_profile_insertone, db_profile_banned
 from cfgmust import cfg
 
+from keyboards.default import message_keyboard
 
 welcomemessage = cfg['welcome_message']
 errormessage = cfg['error_message']
