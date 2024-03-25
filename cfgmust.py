@@ -1,8 +1,8 @@
 cfg = {
-	'token': '6509213439:AAFOQ8VHOjgTFHTyItfkDLlnGoFtgVRJGHk',
-	'name': 'anothertype',
+	'token': '6857735523:AAHE8BKmxheY0CGns1ihE-g3iX5YeJFSvgE',
+	'name': 'smth',
 	'dev_id': 6601294279,
-	'teh_chat_id': -1002112563993,
+	'teh_chat_id': -1002005247093,
 	'db_url': 'mongodb+srv://mvhd:root@cluster0.qg09zhw.mongodb.net/?retryWrites=true&w=majority',
 	'db_name': 'dev',
 
