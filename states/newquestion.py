@@ -27,7 +27,7 @@ async def newquestion(message: types.Message, state: FSMContext):
 		ph = message.photo[0].file_id
 		await message.reply(f"{message_seneded}",
 							parse_mode='Markdown')
-		await bot.send_photo(tehchatid, ph, caption=f"✉ | New Question\nFrom: {who}\nQuestion: `{data['text']}`\n\n📝 For Answer Question Please Type `/answer {message.chat.id} Your Answer`",parse_mode='Markdown')
+		await bot.send_photo(tehchatid, ph, caption=f"✉ | New Question\nFrom: {who}\nQuestion: `{data['text']}`\n\n📝 For Answer Question Please Type `/answer {message.chat.id} Your Answer`", parse_mode='Markdown')
 	else:
 		await message.reply(f"{message_seneded}",
 							parse_mode='Markdown')
